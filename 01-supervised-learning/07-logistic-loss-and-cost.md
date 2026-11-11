@@ -23,7 +23,7 @@ The source's sketch of $-\log(f)$ and the notes beside it say (for the case $y^{
 
 **Therefore the loss is lowest when $f_{\vec w,b}(\vec x)$ predicts close to the true label $y^{(i)}$.**
 
-![Log loss curves for y=1 and y=0](../assets/figures/log-loss.png)
+![Log loss curves for y=1 and y=0](../assets/figures/log-loss.webp)
 
 *Figure: $-\log(f)$ (for $y=1$) and $-\log(1-f)$ (for $y=0$). Each is near 0 when the prediction matches the label and grows very large when it does not.*
 
@@ -50,7 +50,7 @@ The source compares the shape of the cost curve:
 
 A non-convex cost has several dips, so gradient descent can get stuck. This is why the log loss above is used instead.
 
-![Convex versus non-convex cost](../assets/figures/mse-convex-vs-nonconvex.png)
+![Convex versus non-convex cost](../assets/figures/mse-convex-vs-nonconvex.webp)
 
 *Figure: schematic redrawing of the source's two sketches.*
 

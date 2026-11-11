@@ -32,7 +32,7 @@ $$
 
 This is a circle. In the source's sketch the **o** points are inside the circle and the **x** points are outside.
 
-![Linear and circular decision boundaries](../assets/figures/decision-boundaries.png)
+![Linear and circular decision boundaries](../assets/figures/decision-boundaries.webp)
 
 *Figure: left, the line $x_1+x_2=3$; right, the circle $x_1^2+x_2^2=1$. The points are synthetic and only illustrate the two examples drawn in the source.*
 

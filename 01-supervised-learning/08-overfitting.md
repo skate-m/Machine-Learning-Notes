@@ -12,7 +12,7 @@ The source draws the same data fitted three ways:
 | Smooth curve through the data | **Generalized** — ideal | Fits the pattern and should work on new data. |
 | Wiggly curve through every point | **Overfit** — high variance | The model memorises the training data. |
 
-![Underfit, generalised and overfit regression fits](../assets/figures/underfit-generalised-overfit.png)
+![Underfit, generalised and overfit regression fits](../assets/figures/underfit-generalised-overfit.webp)
 
 *Figure: the three cases from the source, redrawn with synthetic data.*
 

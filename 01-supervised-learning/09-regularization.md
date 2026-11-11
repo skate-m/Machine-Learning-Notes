@@ -14,7 +14,7 @@ $$
 
 > In order for the cost to be lower, $w_3$ and $w_4$ have to be small, as their coefficient is big.
 
-![Overfit curve versus regularised curve](../assets/figures/regularization-effect.png)
+![Overfit curve versus regularised curve](../assets/figures/regularization-effect.webp)
 
 *Figure: the same overfitting polynomial without and with a penalty on large weights (synthetic data).*
 

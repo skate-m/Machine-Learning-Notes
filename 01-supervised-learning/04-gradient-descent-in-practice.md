@@ -6,7 +6,7 @@
 
 Plot the cost $J(w,b)$ against the number of iterations. The cost should decrease on every iteration.
 
-![Cost against iterations flattening out](../assets/figures/gradient-descent-convergence.png)
+![Cost against iterations flattening out](../assets/figures/gradient-descent-convergence.webp)
 
 *Figure: the source's sketch shows $J(w,b)$ flattening out; it is "likely converged by 400 iterations" (schematic redrawing).*
 
@@ -16,7 +16,7 @@ Plot the cost $J(w,b)$ against the number of iterations. The cost should decreas
 
 If $J(w,b)$ goes up and down, or keeps increasing, then **there is a bug, or $\alpha$ is too large**.
 
-![Two bad learning curves](../assets/figures/learning-rate-problems.png)
+![Two bad learning curves](../assets/figures/learning-rate-problems.webp)
 
 *Figure: the two situations drawn in the source note — a zig-zagging cost and a steadily increasing cost.*
 
