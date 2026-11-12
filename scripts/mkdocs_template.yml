@@ -1,0 +1,34 @@
+site_name: Machine Learning Notes
+site_description: Digitised handwritten Machine Learning notes
+docs_dir: docs
+theme:
+  name: material
+  font:
+    text: Nunito
+    code: JetBrains Mono
+  palette:
+    scheme: slate
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+extra_css:
+  - assets/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+extra_javascript:
+  - assets/katex-init.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+plugins:
+  - search
+nav:
+{{NAV}}

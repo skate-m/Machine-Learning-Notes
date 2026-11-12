@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap');
+:root, [data-md-color-scheme="slate"] {
+  --md-default-bg-color: #171821;
+  --md-default-bg-color--light: #222332;
+  --md-default-fg-color: #F1EFF7;
+  --md-default-fg-color--light: #AAA9BB;
+  --md-primary-fg-color: #2C2B40;
+  --md-primary-bg-color: #F1EFF7;
+  --md-accent-fg-color: #E89BB5;
+  --md-typeset-a-color: #A78BFA;
+  --md-code-bg-color: #222332;
+  --md-code-fg-color: #F1EFF7;
+  --md-footer-bg-color: #171821;
+}
+.md-header, .md-tabs { background-color: #2C2B40; }
+.md-sidebar { background: #171821; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { font-family: 'Fredoka', 'Nunito', sans-serif; color: #A78BFA; font-weight: 600; }
+.md-typeset h2 { border-bottom: 1px solid #2C2B40; padding-bottom: .2em; }
+.md-typeset blockquote { background: #2C2B40; border-left: 4px solid #A78BFA; color: #F1EFF7; padding: .6em 1em; border-radius: 0 8px 8px 0; }
+.md-typeset table:not([class]) { background: #222332; border: 1px solid #2C2B40; }
+.md-typeset table:not([class]) th { background: #2C2B40; color: #EAC477; }
+.md-typeset code { font-family: 'JetBrains Mono', monospace; }
+.md-typeset img { max-width: 100%; border-radius: 10px; }
+.katex { color: #EAC477; }
+.md-typeset em { color: #AAA9BB; }

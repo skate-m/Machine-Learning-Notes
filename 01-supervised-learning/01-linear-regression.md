@@ -50,7 +50,7 @@ $\alpha$ is the **learning rate**:
 | Large | Step size increases (↑) |
 | Small | Step size decreases (↓) |
 
-![Gradient descent with a small and a large learning rate](../assets/figures/gradient-descent-step-size.webp)
+![Gradient descent with a small and a large learning rate](../assets/figures/gradient-descent-step-size.png)
 
 *Figure: with a small $\alpha$ each step is small; with a large $\alpha$ the steps are big and can overshoot the minimum (illustrative cost, not from the source).*
 

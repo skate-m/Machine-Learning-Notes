@@ -14,7 +14,7 @@ $$
 
 > In order for the cost to be lower, $w_3$ and $w_4$ have to be small, as their coefficient is big.
 
-![Overfit curve versus regularised curve](../assets/figures/regularization-effect.webp)
+![Overfit curve versus regularised curve](../assets/figures/regularization-effect.png)
 
 *Figure: the same overfitting polynomial without and with a penalty on large weights (synthetic data).*
 
@@ -67,6 +67,36 @@ $$
 **$b$ is the same** as in the unregularized case.
 
 > **Note on the source:** in the logistic cost the page has no brackets around the two log terms (the minus sign is written only in front of the first), and the derivative is written without a summation sign. Both are completed above in the usual way; see [TRANSCRIPTION_NOTES](../TRANSCRIPTION_NOTES.md).
+
+## Detailed Explanation
+
+> **Additional Explanation:**  
+> This explanation has been added to improve understanding and is not a direct transcription of the original handwritten notes.
+>
+> **Why small weights give smooth curves.** To make a curve twist sharply you need big coefficients, especially on high powers like $x^3$ and $x^4$. If we punish large weights, the model can no longer afford sharp twists, so the curve relaxes.
+>
+> **What $\lambda$ does.** The new cost is a balance between two goals: fit the data (first term) and keep the weights small (second term). $\lambda$ sets how much each goal matters.
+>
+> | $\lambda$ | What happens |
+> |---|---|
+> | $0$ | No penalty, so it can overfit. |
+> | Moderate | Good balance. |
+> | Very large | All weights are pushed close to 0, so $f\approx b$, a flat line. This underfits. |
+>
+> **Why only $w_j$ and not $b$.** The sums in the notes run over $j=1..n$ and do not include $b$. The bias only shifts the whole curve up or down and does not make it wiggle.
+>
+> **What the extra term does inside gradient descent.** Write the update out:
+>
+> $$ w_j = w_j - \alpha\left[\frac{1}{m}\sum\left(f-y\right)x_j + \frac{\lambda}{m}w_j\right] = w_j\left(1-\alpha\frac{\lambda}{m}\right) - \alpha\frac{1}{m}\sum\left(f-y\right)x_j $$
+>
+> So each step first **shrinks** $w_j$ slightly by the factor $\left(1-\alpha\lambda/m\right)$, then applies the usual correction. With $\alpha=0.01,\ \lambda=1,\ m=50$ the factor is $1-0.0002 = 0.9998$, a tiny shrink at every step, which adds up over many iterations.
+>
+> **The source's "1000" example.** Putting a large coefficient (1000) on $w_3^2$ and $w_4^2$ forces those two weights to be almost 0. $\lambda$ does the same for *all* weights when we do not know which ones to punish.
+>
+> **Common mistakes.**
+>
+> - Choosing $\lambda$ by looking at the training error. Choose it using the cross-validation set (see [Bias and variance](../03-model-evaluation-and-ml-practice/03-bias-and-variance.md)).
+> - Forgetting that scaled features are needed, or the penalty hits the large-range features unfairly.
 
 ## 5. Related topics
 

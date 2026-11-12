@@ -23,7 +23,7 @@ The source's sketch of $-\log(f)$ and the notes beside it say (for the case $y^{
 
 **Therefore the loss is lowest when $f_{\vec w,b}(\vec x)$ predicts close to the true label $y^{(i)}$.**
 
-![Log loss curves for y=1 and y=0](../assets/figures/log-loss.webp)
+![Log loss curves for y=1 and y=0](../assets/figures/log-loss.png)
 
 *Figure: $-\log(f)$ (for $y=1$) and $-\log(1-f)$ (for $y=0$). Each is near 0 when the prediction matches the label and grows very large when it does not.*
 
@@ -50,7 +50,7 @@ The source compares the shape of the cost curve:
 
 A non-convex cost has several dips, so gradient descent can get stuck. This is why the log loss above is used instead.
 
-![Convex versus non-convex cost](../assets/figures/mse-convex-vs-nonconvex.webp)
+![Convex versus non-convex cost](../assets/figures/mse-convex-vs-nonconvex.png)
 
 *Figure: schematic redrawing of the source's two sketches.*
 
@@ -95,6 +95,34 @@ $$
 > **Additional Explanation:**  
 > This explanation has been added to improve understanding and is not a direct transcription of the original handwritten notes.  
 > These updates look the same as those of linear regression; the difference is the definition of $f$, which here is the sigmoid of $\vec w\cdot\vec x+b$.
+
+## Detailed Explanation
+
+> **Additional Explanation:**  
+> This explanation has been added to improve understanding and is not a direct transcription of the original handwritten notes.
+>
+> **What the output means.** For logistic regression, $f_{\vec w,b}(\vec x)$ is the model's belief, as a number between 0 and 1, that the label is 1. The loss should be small when that belief agrees with the real label and large when it does not.
+>
+> **Worked examples (natural logarithm).**
+>
+> | True $y$ | Prediction $f$ | Loss |
+> |---|---|---|
+> | 1 | 0.99 | $-\ln(0.99) \approx 0.01$ (very small) |
+> | 1 | 0.90 | $-\ln(0.90) \approx 0.105$ |
+> | 1 | 0.10 | $-\ln(0.10) \approx 2.30$ (large) |
+> | 0 | 0.10 | $-\ln(0.90) \approx 0.105$ |
+> | 0 | 0.99 | $-\ln(0.01) \approx 4.6$ (very large) |
+>
+> Being confidently wrong is punished very heavily. Being unsure costs a little. That is exactly the behaviour we want.
+>
+> **A tiny cost calculation.** Two examples: $(f=0.9,\ y=1)$ and $(f=0.2,\ y=0)$. The losses are $0.105$ and $-\ln(0.8)=0.223$. So $J = (0.105 + 0.223)/2 \approx 0.164$.
+>
+> **Why not squared error.** With the sigmoid inside, squared error produces a bumpy surface with many flat regions and dips, so gradient descent can stall. The log loss gives a single bowl-shaped (convex) surface, so one global minimum is reachable.
+>
+> **Common mistakes.**
+>
+> - Using $\log(0)$. A prediction of exactly 0 or 1 that is wrong gives infinite loss, so numerical code keeps $f$ slightly away from 0 and 1.
+> - Using the linear-regression formula for $f$. Here $f$ is the sigmoid of $\vec w\cdot\vec x+b$.
 
 ## 6. Related topics
 

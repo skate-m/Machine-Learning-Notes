@@ -1,0 +1,97 @@
+site_name: Machine Learning Notes
+site_description: Digitised handwritten Machine Learning notes
+docs_dir: docs
+theme:
+  name: material
+  font:
+    text: Nunito
+    code: JetBrains Mono
+  palette:
+    scheme: slate
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+extra_css:
+  - assets/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+extra_javascript:
+  - assets/katex-init.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+plugins:
+  - search
+nav:
+  - Home: index.md
+  - "01 — Supervised Learning":
+      - Overview: 01-supervised-learning/README.md
+      - "Linear Regression": 01-supervised-learning/01-linear-regression.md
+      - "Linear Regression with Multiple Features": 01-supervised-learning/02-multiple-features-and-vectorization.md
+      - "Feature Scaling": 01-supervised-learning/03-feature-scaling.md
+      - "Gradient Descent in Practice": 01-supervised-learning/04-gradient-descent-in-practice.md
+      - "Feature Engineering and Polynomial Regression": 01-supervised-learning/05-feature-engineering-and-polynomial-regression.md
+      - "Decision Boundary": 01-supervised-learning/06-decision-boundary.md
+      - "Logistic Loss, Cost and Gradient Descent": 01-supervised-learning/07-logistic-loss-and-cost.md
+      - "Overfitting": 01-supervised-learning/08-overfitting.md
+      - "Regularization": 01-supervised-learning/09-regularization.md
+  - "02 — Advanced Learning Algorithms":
+      - Overview: 02-advanced-learning-algorithms/README.md
+      - "Neural Networks": 02-advanced-learning-algorithms/01-neural-networks.md
+      - "Layer Computation (Intuition)": 02-advanced-learning-algorithms/02-layer-computation.md
+      - "Activation Functions": 02-advanced-learning-algorithms/03-activation-functions.md
+      - "Multiclass Classification and Softmax": 02-advanced-learning-algorithms/04-multiclass-and-softmax.md
+      - "For Loop versus Vectorization (Dense Layer)": 02-advanced-learning-algorithms/05-vectorization-dense-layer.md
+      - "TensorFlow and Model Training Steps": 02-advanced-learning-algorithms/06-tensorflow-and-training-steps.md
+      - "Backpropagation versus Gradient Descent": 02-advanced-learning-algorithms/07-backpropagation-vs-gradient-descent.md
+      - "Adam Algorithm and Types of Layers": 02-advanced-learning-algorithms/08-adam-and-layer-types.md
+  - "03 — Model Evaluation and ML Practice":
+      - Overview: 03-model-evaluation-and-ml-practice/README.md
+      - "Train / Cross-validation / Test Procedure": 03-model-evaluation-and-ml-practice/01-train-cv-test.md
+      - "Model Selection": 03-model-evaluation-and-ml-practice/02-model-selection.md
+      - "Bias and Variance": 03-model-evaluation-and-ml-practice/03-bias-and-variance.md
+      - "Learning Curves and Debugging a Learning Algorithm": 03-model-evaluation-and-ml-practice/04-learning-curves-and-debugging.md
+      - "Adding Data, Data Augmentation and Data Synthesis": 03-model-evaluation-and-ml-practice/05-data-centric-improvements.md
+      - "ML Development and Error Analysis": 03-model-evaluation-and-ml-practice/06-ml-development-and-error-analysis.md
+      - "Precision, Recall and the F1 Score": 03-model-evaluation-and-ml-practice/07-precision-recall-f1.md
+      - "Transfer Learning": 03-model-evaluation-and-ml-practice/08-transfer-learning.md
+      - "ML Project Cycle and Deployment": 03-model-evaluation-and-ml-practice/09-ml-project-cycle-and-deployment.md
+  - "04 — Decision Trees and Ensembles":
+      - Overview: 04-decision-trees-and-ensembles/README.md
+      - "Decision Trees": 04-decision-trees-and-ensembles/01-decision-trees.md
+      - "Entropy as a Measure of Impurity": 04-decision-trees-and-ensembles/02-entropy.md
+      - "Information Gain": 04-decision-trees-and-ensembles/03-information-gain.md
+      - "One-Hot Encoding": 04-decision-trees-and-ensembles/04-one-hot-encoding.md
+      - "Regression Trees": 04-decision-trees-and-ensembles/05-regression-trees.md
+      - "Sampling with Replacement and the Random Forest Algorithm": 04-decision-trees-and-ensembles/06-random-forest.md
+      - "XGBoost (eXtreme Gradient Boosting)": 04-decision-trees-and-ensembles/07-xgboost.md
+      - "Decision Trees versus Neural Networks": 04-decision-trees-and-ensembles/08-trees-vs-neural-networks.md
+  - "05 — Unsupervised Learning":
+      - Overview: 05-unsupervised-learning/README.md
+      - "Clustering and K-Means": 05-unsupervised-learning/01-clustering-and-k-means.md
+      - "K-Means Cost Function and Random Initialization": 05-unsupervised-learning/02-k-means-cost-and-initialization.md
+      - "Choosing the Value of K (Elbow Method)": 05-unsupervised-learning/03-choosing-k.md
+      - "Gaussian (Normal) Distribution": 05-unsupervised-learning/04-gaussian-distribution.md
+      - "Anomaly Detection (Intuition) and Choosing Features": 05-unsupervised-learning/05-anomaly-detection.md
+      - "Developing and Evaluating Anomaly Detection Systems": 05-unsupervised-learning/06-evaluating-anomaly-detection.md
+  - "06 — Recommenders and Reinforcement Learning":
+      - Overview: 06-recommenders-and-reinforcement-learning/README.md
+      - "Recommender Systems: Notation": 06-recommenders-and-reinforcement-learning/01-recommender-systems-notation.md
+      - "Collaborative Filtering versus Content-Based Filtering": 06-recommenders-and-reinforcement-learning/02-collaborative-vs-content-based.md
+      - "Collaborative Filtering: Cost Function and Gradient Descent": 06-recommenders-and-reinforcement-learning/03-collaborative-filtering-cost.md
+      - "Collaborative Filtering with Binary Labels": 06-recommenders-and-reinforcement-learning/04-binary-labels.md
+      - "Mean Normalization": 06-recommenders-and-reinforcement-learning/05-mean-normalization.md
+      - "Finding Related Items": 06-recommenders-and-reinforcement-learning/06-finding-related-items.md
+      - "Content-Based Filtering with Deep Learning": 06-recommenders-and-reinforcement-learning/07-content-based-deep-learning.md
+      - "Retrieval and Ranking": 06-recommenders-and-reinforcement-learning/08-retrieval-and-ranking.md
+      - "Reinforcement Learning: Return and Discount Factor": 06-recommenders-and-reinforcement-learning/09-reinforcement-learning-return.md
+      - "Policy and the State-Action Value Function (Q)": 06-recommenders-and-reinforcement-learning/10-policy-and-q-function.md
+  - Transcription notes: TRANSCRIPTION_NOTES.md
