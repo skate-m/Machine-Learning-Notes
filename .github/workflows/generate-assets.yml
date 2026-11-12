@@ -27,6 +27,7 @@ jobs:
           pip install numpy matplotlib mkdocs-material
       - name: Generate diagrams and figures
         run: |
+          mkdir -p assets/diagrams assets/figures
           python scripts/make_diagrams.py
           python scripts/make_figures.py
       - name: Build documentation site
